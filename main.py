@@ -1,22 +1,3 @@
-def A():
-    music.play_tone(262, music.beat(BeatFraction.HALF))
-    music.rest(music.beat(BeatFraction.QUARTER))
-    music.play_tone(262, music.beat(BeatFraction.QUARTER))
-    music.play_tone(330, music.beat(BeatFraction.HALF))
-    music.play_tone(392, music.beat(BeatFraction.HALF))
-
-def B1():
-    music.play_tone(440, music.beat(BeatFraction.QUARTER))
-    music.rest(music.beat(BeatFraction.EIGHTH))
-    music.play_tone(392, music.beat(BeatFraction.QUARTER))
-    music.play_tone(349, music.beat(BeatFraction.EIGHTH))
-    music.play_tone(392, music.beat(BeatFraction.EIGHTH))
-    music.rest(music.beat(BeatFraction.EIGHTH))
-    music.play_tone(392, music.beat(BeatFraction.QUARTER))
-    music.rest(music.beat(BeatFraction.QUARTER))
-    music.play_tone(330, music.beat(BeatFraction.QUARTER))
-    music.play_tone(294, music.beat(BeatFraction.QUARTER))
-
 def B2():
     music.play_tone(349, music.beat(BeatFraction.QUARTER))
     music.rest(music.beat(BeatFraction.EIGHTH))
@@ -28,14 +9,12 @@ def B2():
     music.rest(music.beat(BeatFraction.QUARTER))
     music.play_tone(330, music.beat(BeatFraction.QUARTER))
     music.play_tone(294, music.beat(BeatFraction.QUARTER))
-
-def B3():
-    music.play_tone(349, music.beat(BeatFraction.QUARTER))
-    music.rest(music.beat(BeatFraction.EIGHTH))
-    music.play_tone(330, music.beat(BeatFraction.QUARTER))
-    music.rest(music.beat(BeatFraction.EIGHTH))
-    music.play_tone(294, music.beat(BeatFraction.QUARTER))
+def A():
     music.play_tone(262, music.beat(BeatFraction.HALF))
+    music.rest(music.beat(BeatFraction.QUARTER))
+    music.play_tone(262, music.beat(BeatFraction.QUARTER))
+    music.play_tone(330, music.beat(BeatFraction.HALF))
+    music.play_tone(392, music.beat(BeatFraction.HALF))
 
 def on_button_pressed_a():
     music.play_melody("E D C - - C E - ", 285)
@@ -48,17 +27,17 @@ def on_button_pressed_a():
     music.play_melody("G - F E - D C - ", 285)
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
-def on_button_pressed_b():
-    basic.show_icon(IconNames.SMALL_HEART)
-    basic.show_icon(IconNames.HEART)
-    basic.show_icon(IconNames.SMALL_HEART)
-    basic.show_icon(IconNames.HEART)
-    basic.show_icon(IconNames.SMALL_HEART)
-    basic.show_icon(IconNames.HEART)
-    basic.show_icon(IconNames.SMALL_HEART)
-    basic.show_icon(IconNames.HEART)
-    basic.clear_screen()
-input.on_button_pressed(Button.B, on_button_pressed_b)
+def B1():
+    music.play_tone(440, music.beat(BeatFraction.QUARTER))
+    music.rest(music.beat(BeatFraction.EIGHTH))
+    music.play_tone(392, music.beat(BeatFraction.QUARTER))
+    music.play_tone(349, music.beat(BeatFraction.EIGHTH))
+    music.play_tone(392, music.beat(BeatFraction.EIGHTH))
+    music.rest(music.beat(BeatFraction.EIGHTH))
+    music.play_tone(392, music.beat(BeatFraction.QUARTER))
+    music.rest(music.beat(BeatFraction.QUARTER))
+    music.play_tone(330, music.beat(BeatFraction.QUARTER))
+    music.play_tone(294, music.beat(BeatFraction.QUARTER))
 
 def on_button_pressed_ab():
     music.set_tempo(60)
@@ -74,4 +53,23 @@ def on_button_pressed_ab():
     B3()
 input.on_button_pressed(Button.AB, on_button_pressed_ab)
 
+def on_button_pressed_b():
+    basic.show_icon(IconNames.SMALL_HEART)
+    basic.show_icon(IconNames.HEART)
+    basic.show_icon(IconNames.SMALL_HEART)
+    basic.show_icon(IconNames.HEART)
+    basic.show_icon(IconNames.SMALL_HEART)
+    basic.show_icon(IconNames.HEART)
+    basic.show_icon(IconNames.SMALL_HEART)
+    basic.show_icon(IconNames.HEART)
+    basic.clear_screen()
+input.on_button_pressed(Button.B, on_button_pressed_b)
+
+def B3():
+    music.play_tone(349, music.beat(BeatFraction.QUARTER))
+    music.rest(music.beat(BeatFraction.EIGHTH))
+    music.play_tone(330, music.beat(BeatFraction.QUARTER))
+    music.rest(music.beat(BeatFraction.EIGHTH))
+    music.play_tone(294, music.beat(BeatFraction.QUARTER))
+    music.play_tone(262, music.beat(BeatFraction.HALF))
 basic.show_string("SPITZ")
